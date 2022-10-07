@@ -1,0 +1,171 @@
+html {
+    background-color: rgb(135, 84, 159);
+    color: white;
+    font-family: 'Candara', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#mobile {
+    display: none;
+}
+#toggle {
+    display: none;
+}
+section{
+    margin: 2rem;
+    background-color: rgb(97, 37, 150);
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+label{
+    margin: 0;
+    font-size: 26px;
+    line-height: 40px;
+    display: none;
+    width: 26px;
+    /* float: right; */
+}
+#quo{
+    background-color: rgb(255, 255, 255);
+    color:rgb(54, 20, 83);
+    font-weight: 1000;
+    display: block;
+}
+/* navbar */
+.navbar {
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(104, 39, 110);
+    color: white;
+    padding: 0;
+}
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+.navbar li a:hover{
+    color:rgb(104, 39, 110);
+    display: block;
+    background-color: rgba(255, 255, 255, 0.715);
+}
+.navbar li{
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* content */
+#heading {
+    margin: 2rem;
+}
+
+#quotes{
+    text-align: start;
+    margin: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+
+.divs{
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    background-color: rgb(207, 133, 199);
+    border-color: rgb(93, 46, 115);
+    border-width: 2x;
+    border-radius: 10px;
+    border-style: none;
+}
+@media screen and (max-width:1000px){ start of large tablet styles
+    .navbar{
+        position: sticky;
+        top: 0;
+    }
+   
+ } 
+@media screen and (max-width:789px) and (min-width: 501px){ /* start of medium tablet styles */
+    .navbar li{
+        display: inline-block;
+        text-align: center;
+        margin: 0rem;
+        padding: 0;
+    }
+    .navbar{
+        position: sticky;
+        top: 0;
+    }
+    #quotes{
+        grid-template-columns: 1fr 1fr;
+    }  
+    #first{
+        order: 2;
+    }
+    #poem{
+        order: 1;
+    }
+    #second{
+        order: 0;
+        grid-column: span 2;
+    }   
+}
+@media screen and (max-width:500px){ /* start of phone styles */
+    #mobile{
+        display: block;
+    }
+    #pc{
+        display: none;
+    }
+    section{
+        margin: 1rem;
+    }
+    .navbar li{
+        display: block;
+        text-align: center;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+    label{
+        display: block;
+        text-align: center;
+    }
+    .navigation{
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .navigation a{
+        display: block;
+        border-bottom: 1px solid rgb(104, 39, 110);
+    }
+    #toggle:checked + .navigation{
+        display: block; 
+        text-align: center;
+    }
+    #quotes{
+        grid-template-columns: 1fr;
+    }
+}
